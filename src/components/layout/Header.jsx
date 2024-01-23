@@ -2,6 +2,7 @@ import { Container } from "../../style/style";
 import logo from "../../assets/images/header/logo.png";
 import bg from "../../assets/images/header/bg.png";
 import styled from "styled-components";
+import Button from "../UI/Button";
 
 export default function Header() {
   return (
@@ -25,12 +26,15 @@ export default function Header() {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center h-[600px]">
-            <p className="text-white text-center text-base font-medium">
+            <p className="text-white text-center text-base font-medium mb-3">
               Передовая IT студия
             </p>
-            <p className="text-white text-center text-5xl font-extrabold">
+            <p className="text-white text-center text-5xl font-extrabold mb-9">
               Мы создаем легкие решения <br /> сложных задач и проблем
             </p>
+            <Button className="bg-[#4985FF] rounded-[30px] text-white w-[200px] h-[45px]">
+              Наши проекты
+            </Button>
           </div>
         </Container>
       </div>
@@ -43,7 +47,7 @@ const Li = styled.li`
   font-size: 16px;
   font-weight: 500;
   padding: 39px 0;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: border-bottom-color 0.3s ease;
 
   &:hover {
