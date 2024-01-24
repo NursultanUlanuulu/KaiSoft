@@ -3,6 +3,7 @@ import Company from "../company/Company";
 import AllServises from "../allServices/AllServises";
 import Header from "./Header";
 import AllProjects from "../allProjects/AllProjects";
+import Subcribe from "../subcribe/Subcribe";
 
 export default function Layout() {
   return (
@@ -12,6 +13,7 @@ export default function Layout() {
       <Company />
       <AllServises />
       <AllProjects/>
+      <Subcribe/>
     </div>
   );
 }
