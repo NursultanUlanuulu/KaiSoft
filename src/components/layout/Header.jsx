@@ -46,7 +46,7 @@ export default function Header() {
     </Rectangle>
   );
 }
-
+////изменения
 const Li = styled.li`
   color: #fff;
   font-size: 16px;
