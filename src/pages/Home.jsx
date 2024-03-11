@@ -1,8 +1,8 @@
-import About from '../components/about/About';
-import Company from '../components/company/Company';
-import AllServises from '../components/allServices/AllServises';
-import AllProjects from '../components/allProjects/AllProjects';
-import Subcribe from '../components/subcribe/Subcribe';
+import About from "../components/about/About";
+import Company from "../components/company/Company";
+import AllServises from "../components/allServices/AllServises";
+import Subcribe from "../components/subcribe/Subcribe";
+import AllProjects from "../components/allProjects/AllProjects";
 
 const Home = () => {
   return (
@@ -14,6 +14,6 @@ const Home = () => {
       <Subcribe />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
