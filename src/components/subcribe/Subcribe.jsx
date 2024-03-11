@@ -12,7 +12,7 @@ export default function Subcribe() {
           <p className="text-[#999] text-center text-base font-normal">
             Полезные статьи, акции, новости - получите все это сейчас!
           </p>
-          <div className="text-center my-8">
+          <div className="text-center my-8 w-full">
             <Input type="text" placeholder="Ваш e-mail" className=" px-4" />
             <Submit type="submit" value="Подписаться" />
           </div>
@@ -34,6 +34,14 @@ const Input = styled.input`
   outline: none;
   width: 300px;
   height: 45px;
+  @media (min-width: 320px) {
+    width: 100%;
+    border-radius: 30px;
+  }
+  @media (min-width: 768px) {
+    width: 400px;
+    border-radius: 30px 0px 0px 30px;
+  }
 `;
 const Submit = styled.input`
   border-radius: 0px 30px 30px 0px;
@@ -44,4 +52,12 @@ const Submit = styled.input`
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+  @media (min-width: 320px) {
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  @media (min-width: 768px) {
+    width: 170px;
+    border-radius: 0px 30px 30px 0px;
+  }
 `;
