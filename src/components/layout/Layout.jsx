@@ -1,20 +1,12 @@
-import About from "../about/About";
-import Company from "../company/Company";
-import AllServises from "../allServices/AllServises";
-import Header from "./Header";
-import AllProjects from "../allProjects/AllProjects";
-import Subcribe from "../subcribe/Subcribe";
-import Footer from "./Footer";
+import Home from "../../pages/Home";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 export default function Layout() {
   return (
     <div>
       <Header />
-      <About />
-      <Company />
-      <AllServises />
-      <AllProjects />
-      <Subcribe />
+      <Home />
       <Footer />
     </div>
   );
