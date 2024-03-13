@@ -1,11 +1,10 @@
-// import code from "../../assets/images/allProjects/code.png";
 import { Container } from "../../style/style";
-import Button from "../UI/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { allProjects } from "../../utils/constants/constants";
+import ProjectCard from "./ProjectCard";
+
 export default function AllProjects() {
   return (
     <section id="projects">
@@ -26,8 +25,9 @@ export default function AllProjects() {
               <Swiper
                 slidesPerView={3}
                 spaceBetween={10}
-                pagination={{
-                  clickable: true,
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
                 }}
                 breakpoints={{
                   320: {
@@ -47,22 +47,22 @@ export default function AllProjects() {
                     spaceBetween: 30,
                   },
                 }}
-                modules={[Pagination]}
+                modules={[Autoplay]}
                 className="mySwiper"
               >
-                {allProjects.map(({ image, id }) => (
+                {allProjects.map(({ image, id, title, subTitle, dscr }) => (
                   <SwiperSlide key={id}>
-                    <div className="flex justify-center mb-10">
-                      <img src={image} alt="" />
+                    <div className="flex justify-center items-center h-full">
+                      <ProjectCard
+                        image={image}
+                        title={title}
+                        subTitle={subTitle}
+                        dscr={dscr}
+                      />
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
-            <div className="text-center mt-12 ">
-              <Button className="bg-[#4985FF] text-white w-[200px] h-[45px] rounded-[30px] shadow-md">
-                Все проекты
-              </Button>
             </div>
           </div>
         </Container>
