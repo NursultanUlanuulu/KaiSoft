@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Li = styled.li`
-  color: #fff;
+  color: #000000;
   font-size: 16px;
   font-weight: 500;
   padding: 39px 0;
@@ -9,7 +9,9 @@ const Li = styled.li`
   transition: border-bottom-color 0.3s ease;
 
   &:hover {
-    border-bottom-color: #fff;
+    color: #ec6408;
+    opacity: 0.7;
+    transition: color 0.4s;
     cursor: pointer;
   }
 
@@ -22,14 +24,20 @@ const Li = styled.li`
   }
 `;
 const Nav = () => {
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   return (
     <div>
       <nav>
         <ul className="flex lg:justify-between w-[650px]">
-          <Li>Главная</Li>
-          <Li>Наши проекты</Li>
-          <Li>Услуги</Li>
-          <Li>Новости</Li>
+          <Li onClick={() => scrollToSection("main")}>Главная</Li>
+          <Li onClick={() => scrollToSection("projects")}>Наши проекты</Li>
+          <Li onClick={() => scrollToSection("services")}>Услуги</Li>
+          <Li  onClick={() => scrollToSection("about")}>О нас</Li>
           <Li>Контакты</Li>
         </ul>
       </nav>
