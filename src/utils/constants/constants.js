@@ -177,24 +177,24 @@ export const footerData = [
     title: "Наши проекты",
     items: [
       {
-        text: "РосНано",
+        text: "BTB 24",
         icon: arrow,
-        href: "https://rosnano.com/", // Ссылка на сайт Роснано
+        href: "https://www.baitushum.kg/ru/retail-banking/btb24/",
       },
       {
-        text: "Сколково",
+        text: "BTB Online",
         icon: arrow,
-        href: "https://skolkovo.ru/", // Ссылка на сайт Сколково
+        href: "https://btbonline.baitushum.kg/",
       },
       {
-        text: "Проект “Восток”",
+        text: "Cometa",
         icon: arrow,
-        href: "https://projectvostok.com/", // Ссылка на сайт проекта "Восток"
+        href: "/", 
       },
       {
-        text: "ТЭЦ Калининграда",
+        text: "Oxford school",
         icon: arrow,
-        href: "https://www.tgc-1.ru/kaliningradskaya-tec/", // Ссылка на сайт ТЭЦ Калининграда
+        href: "/",
       },
     ],
   },
