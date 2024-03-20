@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { scrollToSection } from "../../utils/data/Scrol";
 
-const Li = styled.li`
+export const Li = styled.li`
   color: #000000;
   font-size: 16px;
   font-weight: 500;
@@ -14,7 +15,7 @@ const Li = styled.li`
     transition: color 0.4s;
     cursor: pointer;
   }
-
+  
   @media (min-width: 768px) {
     margin-right: 30px;
     padding: 34px 0;
@@ -24,12 +25,7 @@ const Li = styled.li`
   }
 `;
 const Nav = () => {
-  function scrollToSection(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+
   return (
     <div>
       <nav>
@@ -37,7 +33,7 @@ const Nav = () => {
           <Li onClick={() => scrollToSection("main")}>Главная</Li>
           <Li onClick={() => scrollToSection("projects")}>Наши проекты</Li>
           <Li onClick={() => scrollToSection("services")}>Услуги</Li>
-          <Li  onClick={() => scrollToSection("about")}>О нас</Li>
+          <Li onClick={() => scrollToSection("about")}>О нас</Li>
           <Li>Контакты</Li>
         </ul>
       </nav>
