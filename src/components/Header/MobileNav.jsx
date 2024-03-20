@@ -50,7 +50,7 @@ const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; 
   height: 110vh;
   background-color: rgba(0, 0, 0, ${({ isOpen }) => (isOpen ? "0.7" : "0")});
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};

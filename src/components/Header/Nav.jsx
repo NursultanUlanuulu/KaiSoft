@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { scrollToSection } from "../../utils/data/Scrol";
+import { useTranslation } from "react-i18next";
 
 export const Li = styled.li`
   color: #000000;
@@ -15,7 +16,7 @@ export const Li = styled.li`
     transition: color 0.4s;
     cursor: pointer;
   }
-  
+
   @media (min-width: 768px) {
     margin-right: 30px;
     padding: 34px 0;
@@ -25,16 +26,19 @@ export const Li = styled.li`
   }
 `;
 const Nav = () => {
+  const { t } = useTranslation("header");
 
   return (
     <div>
       <nav>
         <ul className="flex lg:justify-between w-[650px]">
-          <Li onClick={() => scrollToSection("main")}>Главная</Li>
-          <Li onClick={() => scrollToSection("projects")}>Наши проекты</Li>
-          <Li onClick={() => scrollToSection("services")}>Услуги</Li>
-          <Li onClick={() => scrollToSection("about")}>О нас</Li>
-          <Li>Контакты</Li>
+          <Li onClick={() => scrollToSection("main")}>{t("Главная")}</Li>
+          <Li onClick={() => scrollToSection("projects")}>
+            {t("Наши проекты")}
+          </Li>
+          <Li onClick={() => scrollToSection("services")}>{t("Услуги")}</Li>
+          <Li onClick={() => scrollToSection("about")}>{t("О нас")}</Li>
+          <Li>{t("Контакты")}</Li>
         </ul>
       </nav>
     </div>
