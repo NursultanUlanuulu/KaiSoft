@@ -1,41 +1,60 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { Container } from "../../style/style";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
-  const [lastScrollTop, setLastScrollTop] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const lastScrollTop = useRef(0);
+  const headerRef = useRef(null);
+
+  const handleScroll = useCallback(() => {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    setVisible(
+      currentScrollTop < lastScrollTop.current || currentScrollTop < 100
+    );
+    lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-
-      setVisible(currentScrollTop < lastScrollTop || currentScrollTop < 100);
-      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
-    };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, [handleScroll]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <StyledHeader visible={visible}>
+    <StyledHeader ref={headerRef} visible={visible}>
       <Container>
         <div className="flex items-center justify-between">
           <Logo />
           <div className="hidden md:flex ml-14">
             <Nav />
           </div>
-          <button className=" inline-block md:hidden text-white">
-            <MenuIcon />
+          <button className="inline-block py-5 md:hidden" onClick={toggleMenu} >
+            {menuOpen ? (
+              <CloseIcon sx={{ color: "black" }} />
+            ) : (
+              <MenuIcon sx={{ color: "black" }} />
+            )}
           </button>
         </div>
+        <MobileNav isOpen={menuOpen} onClose={closeMenu} />
       </Container>
     </StyledHeader>
   );
