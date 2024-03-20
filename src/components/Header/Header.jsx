@@ -10,6 +10,7 @@ import MobileNav from "./MobileNav";
 const Header = () => {
   const [visible, setVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+
   const lastScrollTop = useRef(0);
   const headerRef = useRef(null);
 
@@ -46,7 +47,7 @@ const Header = () => {
           <div className="hidden md:flex ml-14">
             <Nav />
           </div>
-          <button className="inline-block py-5 md:hidden" onClick={toggleMenu} >
+          <button className="inline-block py-5 md:hidden" onClick={toggleMenu}>
             {menuOpen ? (
               <CloseIcon sx={{ color: "black" }} />
             ) : (
