@@ -46,6 +46,7 @@ const Header = () => {
           <Logo />
           <div className="hidden md:flex ml-14">
             <Nav />
+            {/* <HeaderTranslate /> */}
           </div>
           <button className="inline-block py-5 md:hidden" onClick={toggleMenu}>
             {menuOpen ? (
