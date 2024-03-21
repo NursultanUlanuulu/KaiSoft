@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { scrollToSection } from "../../utils/data/Scrol";
+import HeaderTranslate from "./HeaderTranslate";
+import { useTranslation } from "react-i18next";
 
 const MobileNav = ({ isOpen, onClose }) => {
+
+  const { t } = useTranslation("header");
+
   const handleMenuItemClick = (section) => {
     onClose();
     scrollToSection(section);
@@ -11,23 +16,24 @@ const MobileNav = ({ isOpen, onClose }) => {
       <Background isOpen={isOpen} onClick={onClose} />
       <MenuContent isOpen={isOpen}>
         <MenuItems isOpen={isOpen}>
+          <HeaderTranslate />
           <MenuItem onClick={() => handleMenuItemClick("main")}>
-            Главная
+            {t("Главная")}
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("projects")}>
-            Наши проекты
+            {t("Наши проекты")}
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("services")}>
-            Услуги
+            {t("Услуги")}
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("about")}>
-            О нас
+            {t("О нас")}
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("contacts")}>
-            Контакты
+            {t("Контакты")}
           </MenuItem>
         </MenuItems>
-        <CloseButton onClick={onClose}>Close</CloseButton>
+        <CloseButton onClick={onClose}>{t("Закрыть")}</CloseButton>
       </MenuContent>
     </StyledMobileNav>
   );
@@ -50,7 +56,7 @@ const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   height: 110vh;
   background-color: rgba(0, 0, 0, ${({ isOpen }) => (isOpen ? "0.7" : "0")});
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
