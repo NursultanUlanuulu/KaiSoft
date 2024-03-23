@@ -1,20 +1,63 @@
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import outsourcing from "../../assets/images/about/outsourcing.webp";
+import consulting from "../../assets/images/about/consulting.jpg";
+import outstaff from "../../assets/images/about/outstaff.png";
 
-const AboutItem = ({ item }) => {
+const AboutItem = () => {
+  const { t } = useTranslation(["home"]);
   return (
-    <div className="mb-5 md:w-[350px] flex flex-col items-center sm:flex-row md:flex-col lg:flex-row lg:justify-between lg:items-center lg:h-[139px] ">
-      <div className="border-2 border-[#E0E0E0] rounded-[50%]  w-[110px] h-[110px] p-2 mr-2">
-        <div className="border-2 border-[#ec6408] p-3 rounded-[50%]  w-[90px] h-[90px]">
+    <div className="mt-9  sm:flex sm:flex-col sm:items-center md:flex-row md:flex-wrap md:justify-center md:gap-2 lg:mt-[70px] lg:flex justify-between ">
+      <div className="mb-5 pb-4 flex flex-col items-center shadow-xl  rounded-xl sm:flex-row md:flex-col md:h-full lg:justify-between lg:w-[315px]">
+        <div className="">
           <img
-            src={item.image}
-            className="w-full h-full object-cover p-2"
+            src={outstaff}
+            className=" md:h-[184px] md:w-[350px] rounded-tr-xl rounded-tl-xl"
             alt="Project"
           />
         </div>
+        <div className="w-full text-center pt-3 sm:w-[20rem] md:w-[19rem] md:text-cente sm:text-start lg:text-start ">
+          <h1 className="text-[#000] md:text-xl font-semibold">Out staff</h1>
+          <h1 className="text-[#999] md:text-lg font-normal">
+            {t(
+              "Наша компания предоставляет квалифицированных специалистов для вашей команды, облегчая процесс подбора и улучшая вашу операционную эффективность."
+            )}
+          </h1>
+        </div>
       </div>
-      <div className="w-full text-center sm:w-[20rem] md:w-[16rem] md:text-center sm:text-start lg:text-start lg:mt-[60px]">
-        <h1 className="text-[#000] md:text-xl font-semibold ">{item.title}</h1>
-        <h1 className="text-[#999] md:text-lg font-normal">{item.discr}</h1>
+      <div className="mb-5 pb-4 flex flex-col items-center shadow-xl  rounded-xl sm:flex-row md:flex-col md:h-full lg:justify-between lg:w-[315px]">
+        <div className="">
+          <img
+            src={outsourcing}
+            className=" md:h-[184px] md:w-[350px] rounded-tr-xl rounded-tl-xl"
+            alt="Project"
+          />
+        </div>
+        <div className="w-full text-center pt-3 sm:w-[20rem] md:w-[19rem] md:text-cente sm:text-start lg:text-start ">
+          <h1 className="text-[#000] md:text-xl font-semibold">Outsource</h1>
+          <h1 className="text-[#999] md:text-lg font-normal">
+            {t(
+              "Мы предоставляем высококачественные аутсорсинговые услуги, позволяя вам сосредоточиться на стратегически важных аспектах вашего бизнеса."
+            )}
+          </h1>
+        </div>
+      </div>
+      <div className="mb-5 pb-4 flex flex-col items-center shadow-xl  rounded-xl sm:flex-row md:flex-col md:h-full lg:justify-between lg:w-[315px]">
+        <div className="">
+          <img
+            src={consulting}
+            className=" md:h-[184px] md:w-[350px] rounded-tr-xl rounded-tl-xl"
+            alt="Project"
+          />
+        </div>
+        <div className="w-full text-center pt-3 sm:w-[20rem] md:w-[19rem] md:text-cente sm:text-start lg:text-start ">
+          <h1 className="text-[#000] md:text-xl font-semibold">Consulting</h1>
+          <h1 className="text-[#999] md:text-lg font-normal">
+            {t(
+              "Мы предлагаем консультационную поддержку, помогая вам разрабатывать и внедрять успешные стратегии в области IT, соответствующие вашим бизнес-целям."
+            )}
+          </h1>
+        </div>
       </div>
     </div>
   );
