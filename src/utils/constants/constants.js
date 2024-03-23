@@ -1,36 +1,12 @@
-import project from "../../assets/icons/project.svg";
 import comerta from "../../assets/images/allProjects/cometa.svg";
 import lms from "../../assets/images/allProjects/lms.svg";
 import BTB_Online from "../../assets/images/allProjects/BTB_Online.svg";
 import btb from "../../assets/images/allProjects/btb.svg";
-// import lms_mentor from "../../assets/images/allProjects/lms_mentor.jpg";
 import email from "../../assets/icons/email.svg";
 import phone from "../../assets/icons/phone.svg";
 import location from "../../assets/icons/location.svg";
 import arrow from "../../assets/icons/arrow.svg";
-export const about = [
-  {
-    id: 1,
-    title: "Создание сайтов",
-    image: project,
-    discr:
-      "Lorem Ipsum - это текст- рыба, часто используе в печати и вэб-дизайне.",
-  },
-  {
-    id: 2,
-    title: "Создание сайтов",
-    image: project,
-    discr:
-      "Lorem Ipsum - это текст- рыба, часто используе в печати и вэб-дизайне.",
-  },
-  {
-    id: 3,
-    title: "Создание сайтов",
-    image: project,
-    discr:
-      "Lorem Ipsum - это текст- рыба, часто используе в печати и вэб-дизайне.",
-  },
-];
+
 export const allServisesCard = [
   {
     id: 1,
@@ -189,7 +165,7 @@ export const footerData = [
       {
         text: "Cometa",
         icon: arrow,
-        href: "/", 
+        href: "/",
       },
       {
         text: "Oxford school",
