@@ -6,6 +6,7 @@ import bema from "../../assets/images/team/bema.jpg";
 import mirlan from "../../assets/images/team/mirlan.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useTranslation } from "react-i18next";
 
 const people = [
   {
@@ -54,12 +55,13 @@ const people = [
   },
 ];
 const Team = () => {
+  const { t } = useTranslation(["home"]);
   return (
     <Container>
       <div className="bg-white pt-24 ">
         <div className="max-w-2xl">
           <h2 className="text-3xl mb-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Наша команда
+            {t("Наша команда")}
           </h2>
         </div>
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
