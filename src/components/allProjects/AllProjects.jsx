@@ -4,22 +4,19 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { allProjects } from "../../utils/constants/constants";
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
 export default function AllProjects() {
+  const { t } = useTranslation(["home"]);
   return (
     <section id="projects">
-      <div className="bg-[#F6F6F8] mt-[9rem] py-9">
+      <div className="bg-[#F6F6F8] mt-[5rem] py-9">
         <Container>
           <div className=" ">
             <div>
-              <h2 className="text-center text-[#000] text-xl font-semibold sm:text-2xl sm:font-bold md:text-3xl lg:text-4xl lg:font-bold">
-                Наши проекты
+              <h2 className="text-center mb-10 text-[#000] text-xl font-semibold sm:text-2xl sm:font-bold md:text-3xl lg:text-4xl lg:font-bold">
+                {t("Наши проекты")}
               </h2>
-              <p className="text-center text-[#999] text-sm font-medium mt-3 sm:text-lg md:text-xl    lg:mt-12 mb-16">
-                Lorem Ipsum - это текст-рыба, часто используемый в печати и
-                вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов
-                на латинице с начала XVI века.
-              </p>
             </div>
             <div className="flex justify-between ">
               <Swiper
