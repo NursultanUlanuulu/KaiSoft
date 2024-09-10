@@ -1,11 +1,11 @@
-import comerta from "../../assets/images/allProjects/cometa.svg";
-import lms from "../../assets/images/allProjects/lms.svg";
-import BTB_Online from "../../assets/images/allProjects/BTB_Online.svg";
-import btb from "../../assets/images/allProjects/btb.svg";
-import email from "../../assets/icons/email.svg";
-import phone from "../../assets/icons/phone.svg";
-import location from "../../assets/icons/location.svg";
-import arrow from "../../assets/icons/arrow.svg";
+import comerta from "../../assets/images/allProjects/cometa.svg"
+import lms from "../../assets/images/allProjects/lms.svg"
+import BTB_Online from "../../assets/images/allProjects/BTB_Online.svg"
+import btb from "../../assets/images/allProjects/btb.svg"
+import email from "../../assets/icons/email.svg"
+import phone from "../../assets/icons/phone.svg"
+import location from "../../assets/icons/location.svg"
+import arrow from "../../assets/icons/arrow.svg"
 
 export const allProjects = [
   {
@@ -80,101 +80,97 @@ export const allProjects = [
     title: "BTB 24",
     subTitle: "Mobile banking application",
   },
-];
+]
+
 export const footerData = [
   {
-    title: "Контактная информация",
+    title: "contactInfo",
     items: [
       {
-        text: "kaitechinfoo@gmail.com",
+        text: "email",
         icon: email,
-        href: "mailto:kaitechinfoo@gmail.com", // Ссылка на email
+        href: "kaitechinfoo@gmail.com",
       },
       {
-        text: "+996 550 077 387",
+        text: "phone",
         icon: phone,
-        href: "tel:+996550077387", // Ссылка на телефонный номер
+        href: "tel:+996550077387",
       },
       {
-        text: "Бишкек, Тимирязева, 97",
+        text: "address",
         icon: location,
-        href: "https://www.google.com/maps/place/Бишкек,+Тимирязева,+97", // Ссылка на Google Maps
+        href: "https://go.2gis.com/0gvi69",
       },
     ],
   },
   {
-    title: "Основные ссылки",
+    title: "mainLinks",
     items: [
       {
-        text: "Главная",
+        text: "home",
         icon: arrow,
-        href: "/", // Ссылка на главную страницу
+        href: "/",
       },
       {
-        text: "Наши проекты",
+        text: "ourProjects",
         icon: arrow,
-        href: "/projects", // Ссылка на страницу "Наши проекты"
+        href: "/projects",
       },
       {
-        text: "Наши услуги",
+        text: "ourServices",
         icon: arrow,
-        href: "/services", // Ссылка на страницу "Наши услуги"
+        href: "/services",
       },
       {
-        text: "Контакты",
+        text: "contacts",
         icon: arrow,
-        href: "/contacts", // Ссылка на страницу "Контакты"
+        href: "/contacts",
       },
     ],
   },
   {
-    title: "Наши проекты",
+    title: "ourProjects",
     items: [
       {
-        text: "BTB 24",
+        text: "btb24",
         icon: arrow,
         href: "https://www.baitushum.kg/ru/retail-banking/btb24/",
       },
       {
-        text: "BTB Online",
+        text: "btbOnline",
         icon: arrow,
         href: "https://btbonline.baitushum.kg/",
       },
       {
-        text: "Cometa",
+        text: "cometa",
         icon: arrow,
         href: "/",
       },
       {
-        text: "Oxford school",
+        text: "oxfordSchool",
         icon: arrow,
         href: "/",
       },
     ],
   },
   {
-    title: "Социальные сети",
+    title: "socialMedia",
     items: [
       {
-        text: "VK.com",
-        icon: arrow,
-        href: "https://vk.com/kaitechinfoo", // Ссылка на VK
-      },
-      {
-        text: "Instagram",
+        text: "instagram",
         icon: arrow,
         href: "https://www.instagram.com/kaitech_it/",
       },
       {
-        text: "Facebook",
+        text: "facebook",
         icon: arrow,
-        href: "https://www.facebook.com/kaitechinfoo", // Ссылка на Facebook
+        href: "https://www.facebook.com",
       },
       {
-        text: "Twitter",
+        text: "twitter",
         icon: arrow,
-        href: "https://twitter.com/kaitechinfoo", // Ссылка на Twitter
+        href: "https://twitter.com",
       },
     ],
   },
-];
+]

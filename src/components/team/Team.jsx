@@ -1,12 +1,12 @@
-import { Container } from "../../style/style";
-import nurs from "../../assets/images/team/nurs.jpg";
-import erjan from "../../assets/images/team/erjan.jpg";
-import chopa from "../../assets/images/team/chopa.jpg";
-import bema from "../../assets/images/team/bema.jpg";
-import mirlan from "../../assets/images/team/mirlan.jpg";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { useTranslation } from "react-i18next";
+import GitHubIcon from "@mui/icons-material/GitHub"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import { useTranslation } from "react-i18next"
+import bema from "../../assets/images/team/bema.jpg"
+import chopa from "../../assets/images/team/chopa.jpg"
+import erjan from "../../assets/images/team/erjan.jpg"
+import mirlan from "../../assets/images/team/mirlan.jpg"
+import nurs from "../../assets/images/team/nurs.jpg"
+import { Container } from "../../style/style"
 
 const people = [
   {
@@ -53,9 +53,9 @@ const people = [
     gitLink: "https://github.com/UlanuuluNusultan",
     LinkedinLink: "https://www.linkedin.com/in/nursultan-ulan-uulu-479218288/",
   },
-];
+]
 const Team = () => {
-  const { t } = useTranslation(["home"]);
+  const { t } = useTranslation(["home"])
   return (
     <Container>
       <div className="bg-white pt-24 ">
@@ -102,7 +102,7 @@ const Team = () => {
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team
