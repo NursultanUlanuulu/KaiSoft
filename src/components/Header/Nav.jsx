@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import { scrollToSection } from "../../utils/data/Scrol";
-import { useTranslation } from "react-i18next";
-import HeaderTranslate from "./HeaderTranslate";
+import styled from "styled-components"
+import { scrollToSection } from "../../utils/data/Scrol"
+import { useTranslation } from "react-i18next"
+import HeaderTranslate from "./HeaderTranslate"
 
 export const Li = styled.li`
   color: #000000;
   font-size: 16px;
   font-weight: 500;
-  padding: 39px 0;
+  /* padding: 39px 0; */
   border-bottom: 3px solid transparent;
   transition: border-bottom-color 0.3s ease;
 
@@ -20,14 +20,14 @@ export const Li = styled.li`
 
   @media (min-width: 768px) {
     margin-right: 18px;
-    padding: 34px 0;
+    padding: 25px 0;
   }
   @media (min-width: 1024px) {
-    padding: 39px 0;
+    padding: 30px 0;
   }
-`;
+`
 const Nav = () => {
-   const { t } = useTranslation("header");
+  const { t } = useTranslation("header")
 
   return (
     <div>
@@ -44,7 +44,7 @@ const Nav = () => {
         </ul>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
