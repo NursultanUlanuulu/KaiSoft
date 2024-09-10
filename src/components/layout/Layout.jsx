@@ -1,13 +1,13 @@
-import Home from "../../pages/Home";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+import Home from "../../pages/Home"
+import { Footer } from "../Footer/Footer"
+import Header from "../Header/Header"
 
-export default function Layout() {
+export function Layout() {
   return (
-    <div>
+    <>
       <Header />
       <Home />
       <Footer />
-    </div>
-  );
+    </>
+  )
 }
